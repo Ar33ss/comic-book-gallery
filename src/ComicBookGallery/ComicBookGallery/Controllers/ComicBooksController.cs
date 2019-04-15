@@ -20,7 +20,7 @@ namespace ComicBookGallery.Controllers
                     "colors: edgar delgado",
                     "letters: chris eliopoulos"
             };
-
+            
             return View();
 
             //if (DateTime.Today.DayOfWeek == DayOfWeek.Monday) {
