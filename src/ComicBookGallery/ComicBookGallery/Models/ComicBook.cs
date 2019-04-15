@@ -7,6 +7,10 @@ namespace ComicBookGallery.Models
 {
     public class ComicBook
     {
+        //GET solo leer
+        //SET no lectura y aplicar
+
+        //propiedades
         public int Id { get; set; }
         public string SeriesTitle { get; set; }
         public int IssueNumber { get; set; }

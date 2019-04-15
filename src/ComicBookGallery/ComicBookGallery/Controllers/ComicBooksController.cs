@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComicBookGallery.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,18 +11,21 @@ namespace ComicBookGallery.Controllers
     {
         public ActionResult Detail()
         {
-            ViewBag.SeriesTitle = "The Amazing Spider-Man";
-            ViewBag.IssueNumber = 700;
-            ViewBag.Description = "<p>Final issue! Witness the final hours of Doctor Octopus' life and his one, last, great act of revenge! Even if Spider-Man survives... <strong>will Peter Parker?</strong></p>";
-            ViewBag.Artists = new string[] {
-                    "script: dan slott",
-                    "pencils: humberto ramos",
-                    "inks: victor olazaba",
-                    "colors: edgar delgado",
-                    "letters: chris eliopoulos"
+            //ComicBook a = new ComicBook();
+            var comicBook = new ComicBook() {
+                SeriesTitle = "The Amazing Spider-Man",
+                IssueNumber = 700,
+                DescriptionHtml = "<p>Final issue! Witness the final hours of Doctor Octopus' life and his one, last, great act of revenge! Even if Spider-Man survives... <strong>will Peter Parker?</strong></p>",
+                Artists = new Artist[] {
+                    new Artist() { Name =" dan slott" , Role ="script"} ,
+                    new Artist() { Name ="humberto ramos" , Role ="pencils"} ,
+                    new Artist() { Name ="victor olazaba" , Role ="inks"} ,
+                    new Artist() { Name ="edgar delgado" , Role ="colors"} ,
+                    new Artist() { Name ="chris eliopoulos" , Role ="letters"} ,
+                }
+
             };
-            
-            return View();
+            return View(comicBook);
 
             //if (DateTime.Today.DayOfWeek == DayOfWeek.Monday) {
             //    return Redirect("/"); // redirect is an action
