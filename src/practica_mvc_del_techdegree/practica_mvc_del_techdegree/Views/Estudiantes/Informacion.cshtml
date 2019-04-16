@@ -1,0 +1,16 @@
+﻿@model practica_mvc_del_techdegree.Models.EstudiantesModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div>
+        <h1>@Model.Titulo</h1>
+        <h3>@Model.Descripcion</h3>
+        <ul>
+
+            @foreach (var pelis in Model.Peliculas)
+            {
+                <li>  @pelis </li>
+            }
+        </ul>
+    </div>
+
